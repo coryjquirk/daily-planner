@@ -7,6 +7,10 @@ A simple calendar app for scheduling your work day
 * This app will save your scheduling data upon closing your window, as long as you remain in the same broswer.
 * Delete your text and hit save to clear the time block.
 
+## Links
+* Depolyed application: https://coryjquirk.github.io/daily-planner/
+* Repository: https://github.com/coryjquirk/daily-planner
+
 ### Sreenshot
 * https://coryjquirk.github.io/daily-planner/screenshot.png
 
