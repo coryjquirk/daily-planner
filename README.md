@@ -12,7 +12,7 @@ A simple calendar app for scheduling your work day
 * Repository: https://github.com/coryjquirk/daily-planner
 
 ### Sreenshot
-* https://coryjquirk.github.io/daily-planner/images/screenshot.png
+* https://coryjquirk.github.io/daily-planner/images/screenshot.PNG
 
 ## Features
 * This app will save your scheduling data upon closing your window, as long as you remain in the same broswer.
