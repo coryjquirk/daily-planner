@@ -1,5 +1,5 @@
 # Work Day Scheduler
-## A simple calendar app for scheduling your work day
+A simple calendar app for scheduling your work day
 
 ## Usage
 * Enter notes and tasks for the day in a simple hourly calendar. 
