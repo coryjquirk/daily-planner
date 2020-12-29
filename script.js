@@ -13,13 +13,6 @@ document.getElementById('clockbox').innerHTML=clocktext;
 GetClock();
 setInterval(GetClock,1000);
 
-//add controls to set the amt of hrs? creates new blank divs
-
-GetClock();
-setInterval(GetClock,1000);
-
-//take time from GetClock
-//use it to assign divs classes for colors
 timerBoy();
 function timerBoy(){
     const hr = new Date().getHours();
@@ -28,22 +21,40 @@ function timerBoy(){
     $("#padDiv22").css("background-color", "red")
     for (i = 0; i < hours.length; i++) {
         if (hr > hours[i]) {
+            //past color grey
             $("#padDiv"+i).css("background-color", "#d3d3d3");
           } else if (hr === hours[i]) {
+            //present color blue
             $("#padDiv"+i).css("background-color", "#62c4da");
           } else {
+              //future color green
             $("#padDiv"+i).css("background-color", "#88dd88");
           }
     }
 }
-// $( "#padDiv1" ).css( "background-color", "#d3d3d3" );
-// $( "#padDiv1" ).css( "background-color", "#62c4da" );
-// $( "#padDiv1" ).css( "background-color", "#88dd88" );
 
-
-$( ".past" ).css( "background-color", "#d3d3d3" );
-$( ".present" ).css( "background-color", "#62c4da" );
-$( ".future" ).css( "background-color", "#88dd88" );
+const startBtns = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+var i;
+for (i = 0; i < startBtns.length; i++) {
+    const newStart = startBtns[i]
+    $("#"+(i+1)+"Start").click(function() {
+        localStorage.setItem("startTime", newStart);
+        console.log(newStart)
+        console.log("supertickle")
+        renderLastNote();
+    });
+}
+const endBtns = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+for (i = 0; i < endBtns.length; i++) {
+    console.log("here is I " + startBtns[i])
+    const newEnd = endBtns[i]
+    $("#"+(i+1)+"End").click(function() {
+        localStorage.setItem("endTime", newEnd);
+        console.log(newEnd)
+        console.log("supertickle")
+        renderLastNote();
+    });
+}
 
 //variables for each button
 var toDo8 = document.querySelector("#toDo8");

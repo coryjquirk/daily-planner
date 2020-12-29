@@ -1,36 +1,79 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-image: url('black-thread-light.png');
+  background-image: url("black-thread-light.png");
 }
-#fyi{
+#fyi {
   font-size: small;
 }
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   padding: 10px;
 }
-.container{
+.container {
   position: relative;
 }
-header{
+header {
   width: 100%;
-  position:fixed;
+  position: fixed;
   z-index: 1;
   background-color: white;
 }
-#ghostHeader{
-  height: 110px;
+#ghostHeader {
+  height: 180px;
 }
-.description{
+.dropbtn {
+  background-color: #be87be;
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  margin: 0px 5px 5px 0px
+}
+.dropdown {
+  position: relative;
+  /* got this hidden for now. w.i.p. */
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  border-top: solid rgb(139, 139, 139) 1px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #be87be;
+}
+
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
@@ -61,15 +104,15 @@ header{
 
 .btn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-footer{
+footer {
   position: fixed;
   bottom: 0px;
   right: 10px;
-  opacity: .8;
+  opacity: 0.8;
 }
-footer p{
+footer p {
   font-size: small;
   background-color: white;
   padding: 5px 5px 5px 5px;
@@ -80,20 +123,21 @@ footer p{
   .btnBlock {
     display: inline-block;
   }
-  #ghostHeader{
+  #ghostHeader {
     height: 160px;
   }
-  .hour{
+  .hour {
     width: 20%;
   }
-  .col-sm-8{
+  .col-sm-8 {
     width: 60%;
   }
-  .btnBlock{
+  .btnBlock {
     width: 20%;
   }
-  .btn{
-width:40px;
-font-size: small;  
-padding: 5px 5px 5px 5px;}
+  .btn {
+    width: 40px;
+    font-size: small;
+    padding: 5px 5px 5px 5px;
+  }
 }
