@@ -2,8 +2,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: url('black-thread-light.png');
 }
-
+#fyi{
+  font-size: small;
+}
 textarea{
   background: transparent;
   border: none;
@@ -11,15 +14,18 @@ textarea{
   color: #000000;
   padding: 10px;
 }
-
-.jumbotron { 
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+.container{
+  position: relative;
 }
-
+header{
+  width: 100%;
+  position:fixed;
+  z-index: 1;
+  background-color: white;
+}
+#ghostHeader{
+  height: 110px;
+}
 .description{
   white-space: pre-wrap;
 }
@@ -36,7 +42,7 @@ textarea{
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #ffffff83;
   color: #000000;
   border-top: 1px dashed #000000;
 }
@@ -47,12 +53,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #62c4da;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #88dd88;
   color: white;
 }
 
@@ -64,11 +70,45 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #e68d5985;
   color: white;
 }
 
 .btn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+footer{
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  opacity: .8;
+}
+footer p{
+  font-size: small;
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+  margin: 0px 0px 1px 0px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .btnBlock {
+    display: inline-block;
+  }
+  #ghostHeader{
+    height: 160px;
+  }
+  .hour{
+    width: 20%;
+  }
+  .col-sm-8{
+    width: 60%;
+  }
+  .btnBlock{
+    width: 20%;
+  }
+  .btn{
+width:40px;
+font-size: small;  
+padding: 5px 5px 5px 5px;}
 }

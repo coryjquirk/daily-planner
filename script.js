@@ -10,8 +10,13 @@ var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
 document.getElementById('clockbox').innerHTML=clocktext;
 }
 
+//add controls to set the amt of hrs? creates new blank divs
+
 GetClock();
 setInterval(GetClock,1000);
+
+//take time from GetClock
+//use it to assign divs classes for colors
 
 //variables for each button
 var toDo8 = document.querySelector("#toDo8");
@@ -59,15 +64,12 @@ renderLastNote();
 function renderLastNote() {
     var note = localStorage.getItem("#toDo8");
     notePad8.textContent = note;
-    console.log("jingoist8")
 
     var note = localStorage.getItem("#toDo9");
     notePad9.textContent = note;
-    console.log("jingoist9")
 
     var note = localStorage.getItem("#toDo10");
     notePad10.textContent = note;
-    console.log("jingoist10")
 
     var note = localStorage.getItem("#toDo11");
     notePad11.textContent = note;
